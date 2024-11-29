@@ -1,0 +1,26 @@
+print("họ và tên :bùi văn hiếu")
+print("mssv:235752021610033")
+# main.py
+
+import search_module
+
+def input_list():
+    n = int(input("Nhập số lượng phần tử của danh sách: "))
+    lst = []
+    for i in range(n):
+        element = int(input(f"Nhập phần tử thứ {i+1}: "))
+        lst.append(element)
+    return lst
+
+# Nhập danh sách từ bàn phím và sắp xếp
+values = sorted(input_list())
+item = int(input("Nhập phần tử cần tìm: "))
+
+# Tìm kiếm phần tử
+found = search_module.binary_search(values, item)
+
+# In ra kết quả
+if found:
+    print(f"Phần tử {item} được tìm thấy trong danh sách.")
+else:
+    print(f"Phần tử {item} không được tìm thấy trong danh sách.")
