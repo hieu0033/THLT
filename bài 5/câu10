@@ -1,0 +1,20 @@
+print("họ và tên :bùi văn hiếu")
+print("mssv:235752021610033")
+# main.py
+
+import sort_module
+
+def input_list():
+    n = int(input("Nhập số lượng phần tử của danh sách: "))
+    lst = []
+    for i in range(n):
+        element = int(input(f"Nhập phần tử thứ {i+1}: "))
+        lst.append(element)
+    return lst
+
+values = input_list()
+
+# Sắp xếp danh sách bằng hàm bubbleSort
+sorted_values = sort_module.bubbleSort(values)
+print(f"Danh sách đã sắp xếp: {sorted_values}")
+
