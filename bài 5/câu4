@@ -1,0 +1,17 @@
+print("sinh vien: bùi văn hiếu")
+print("mssv:235752021610033")
+import numpy as np
+
+# Tạo mảng với các giá trị từ 12 đến 38
+arr = np.arange(12, 38)
+
+# In mảng ban đầu
+print("Mảng được tạo:")
+print(arr)
+
+# Đảo ngược mảng
+reversed_arr = arr[::-1]
+
+# In mảng đã đảo ngược
+print("Mảng đảo ngược:")
+print(reversed_arr)
