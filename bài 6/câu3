@@ -1,0 +1,23 @@
+print('bùi văn hiếu')
+print(' 235752021610033')
+
+
+class Nguoi(object):
+    def getGender(self):
+        return "Unknown"
+
+class Nam(Nguoi):
+    def getGender(self):
+        return "Nam"
+
+class Nu(Nguoi):
+    def getGender(self):
+        return "Nữ"
+
+# Tạo đối tượng của các lớp Nam và Nu
+aNam = Nam()
+aNu = Nu()
+
+# In ra kết quả của phương thức getGender
+print(aNam.getGender())  # Kết quả: "Nam"
+print(aNu.getGender())   # Kết quả: "Nữ"
