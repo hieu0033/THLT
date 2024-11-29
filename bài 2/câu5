@@ -1,0 +1,9 @@
+print("sinh vien: bùi văn hiếu")
+print("mssv:235752021610033")
+n = int(input("enter a natural number (n > 0)--->"))
+if n > 0:
+    while n >= 0:
+        print(n)
+        n -=1
+else:
+    pribt("please enter a natural number greater than 0.")
