@@ -1,0 +1,10 @@
+print(' bùi văn hiếu ')
+print('235752021610033')
+def file_read(fname):
+    with open(fname, "a") as myfile:
+        myfile.write("Python Exercises\n")
+        myfile.write("Java Exercises\n")
+    with open(fname, "r") as txt:\
+        print(txt.read())
+
+file_read('abc.txt')
