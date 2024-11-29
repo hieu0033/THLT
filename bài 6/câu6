@@ -1,0 +1,20 @@
+print('bùi văn hiếu')
+print('235752021610033')
+class ChuoiXuLy:
+    def __init__(self):
+        self.string = ""
+
+    def get_String(self):
+        self.string = input("Nhập chuỗi của bạn: ")
+
+    def print_String(self):
+        print(self.string.upper())
+
+# Tạo đối tượng của lớp ChuoiXuLy
+chuoi = ChuoiXuLy()
+
+# Gọi phương thức get_String để nhận chuỗi từ người dùng
+chuoi.get_String()
+
+# Gọi phương thức print_String để in chuỗi bằng chữ in hoa
+chuoi.print_String()
