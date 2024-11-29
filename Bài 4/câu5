@@ -1,0 +1,5 @@
+print("họ và tên: bùi văn hiếu")
+print("mssv:235752021610033")
+ds = input('Nhập danh sách các từ: ').split()
+for word in reversed(ds):
+    print(word)
