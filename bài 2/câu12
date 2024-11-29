@@ -1,0 +1,26 @@
+print("bùi văn hiếu")
+print("mssv:235752021610033")
+import re
+
+def is_valid_password(password):
+    if len(password) < 6 or len(password) > 12:
+        return False
+    if not re.search("[a-z]", password):
+        return False
+    if not re.search("[0-9]", password):
+        return False
+    if not re.search("[$#@]", password):
+        return False
+    if re.search("\s", password):  # Sửa lỗi "\S" thành "\s" để kiểm tra khoảng trắng
+        return False
+    return True
+
+input_passwords = input("nhập mật khẩu (phân tách bởi dấu phẩy): ")
+passwords = [x.strip() for x in input_passwords.split(',')]
+valid_passwords = []
+
+for p in passwords:
+    if is_valid_password(p):  # Sửa lỗi "is_valid_passwords" thành "is_valid_password"
+        valid_passwords.append(p)  # Sửa lỗi "vali_passwords,append(P)" thành "valid_passwords.append(p)"
+
+print(",".join(valid_passwords))
