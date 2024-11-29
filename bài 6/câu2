@@ -1,0 +1,12 @@
+print('bùi văn hiếu')
+print('235752021610033')
+class Hinhchunhat:
+    def __init__(self, dai, rong):
+        self.dai = dai
+        self.rong = rong
+
+    def dien_tich(self):
+        return self.dai * self.rong
+hcn = Hinhchunhat(5, 3)
+
+print("Diện tích hình chữ nhật:", hcn.dien_tich())
