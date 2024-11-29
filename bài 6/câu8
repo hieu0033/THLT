@@ -1,0 +1,29 @@
+print('bui van hieu')
+print('235752021610033')
+class ATM:
+    def __init__(self, initial_balance=0):
+        self.balance = initial_balance
+
+    def check_balance(self):
+        return f"Số dư hiện tại của bạn là: {self.balance} VND"
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+            return f"Bạn đã gửi {amount} VND. {self.check_balance()}"
+        else:
+            return "Số tiền gửi phải lớn hơn 0."
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            return "Số dư không đủ."
+        elif amount <= 0:
+            return "Số tiền rút phải lớn hơn 0."
+        else:
+            self.balance -= amount
+            return f"Bạn đã rút {amount} VND. {self.check_balance()}"
+account = ATM(1000000)
+print(account.check_balance())  
+print(account.deposit(500000))  
+print(account.withdraw(200000))
+print(account.withdraw(1500000))
