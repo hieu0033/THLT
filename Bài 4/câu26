@@ -1,0 +1,17 @@
+print("họ và tên :bùi văn hiếu")
+print("mssv:235752021610033")
+transactions = []
+while True:
+    transaction = input("Nhập giao dịch (hoặc nhập 'stop' để kết thúc): ")
+    if transaction.lower() == 'stop':
+        break
+    transactions.append(transaction)
+balance = 0
+for transaction in transactions:
+    type, amount = transaction.split()
+    amount = int(amount)
+    if type == 'D':
+        balance += amount
+    elif type == 'W':
+        balance -= amount
+print("Số dư tài khoản:", balance)
