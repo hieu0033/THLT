@@ -1,0 +1,6 @@
+print("sinh vien: bùi văn hiếu")
+print("mssv:235752021610033")
+import numpy as np
+
+x = np.arange(12, 38)
+print(x)
