@@ -1,0 +1,8 @@
+print("họ và tên :bùi văn hiếu")
+print("mssv:235752021610033")
+def file_read_from_head(fname, nlines):
+    from itertools import islice
+    with open(fname, 'r', encoding='utf-8') as f:
+        for line in islice(f, nlines):
+            print(line.strip())
+file_read_from_head('test.txt', 2)
