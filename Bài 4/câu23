@@ -1,0 +1,7 @@
+print("họ và tên :bùi văn hiếu")
+print("mssv:235752021610033")
+input_str = input("Nhập câu: ")
+letters = sum(c.isalpha() for c in input_str)
+digits = sum(c.isdigit() for c in input_str)
+print(f"Số chữ cái là: {letters}")
+print(f"Số chữ số là: {digits}")
