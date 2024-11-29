@@ -1,0 +1,6 @@
+print("họ và tên: bùi văn hiếu")
+print("mssv:235752021610033")
+ds = ['abc', '123', 'def']
+ds.sort()
+for ch in ds:
+    print(ch)
