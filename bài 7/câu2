@@ -1,0 +1,16 @@
+print("họ và tên :bùi văn hiếu")
+print("mssv:235752021610033")
+def file_statistics(filename):
+    with open(filename, 'r', encoding='utf-8') as file:
+        text = file.read()
+        lines = text.split('\n')
+        num_lines = len(lines)
+        num_chars = len(text)
+        words = text.split()
+        num_words = len(words)
+        return num_lines, num_words, num_chars
+filename = input("Nhập tên tệp cần đọc: ")
+lines, words, chars = file_statistics(filename)
+print(f"Số dòng: {lines}")
+print(f"Số từ: {words}")
+print(f"Số ký tự: {chars}")
