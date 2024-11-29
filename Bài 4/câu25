@@ -1,0 +1,6 @@
+print("họ và tên :bùi văn hiếu")
+print("mssv:235752021610033")
+input_str = input("Nhập dãy số: ")
+numbers = list(map(int, input_str.split(',')))
+odd_numbers = [num for num in numbers if num % 2 != 0]
+print(",".join(map(str, odd_numbers)))
