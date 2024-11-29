@@ -1,0 +1,8 @@
+print('bui van hieu')
+print('235752021610033')
+def count_lines(fname):
+    with open(fname, 'r') as file:
+        lines = file.readlines()
+        return len(lines)
+filename = 'yourfile.txt'
+print(f'Số dòng trong tệp {filename}: {count_lines(filename)}')
