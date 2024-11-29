@@ -1,0 +1,10 @@
+print("họ và tên: bùi văn hiếu")
+print("mssv:235752021610033")
+def checkvalue(n):
+    if n % 2 ==0:
+        print("đây là một số chẵn")
+    else:
+        print("đây là một số lẻ")
+checkvalue(7)
+checkvalue(4)
+        
