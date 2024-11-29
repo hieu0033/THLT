@@ -1,0 +1,12 @@
+print("sinh vien: bùi văn hiếu")
+print("mssv:235752021610033")
+
+a, b = 1, 2
+total = 0
+print(a, end=" ")
+while a <= 4000000:
+    total += a
+    a, b = b, a + b
+    if a <= 4000000:
+        print(a, end=" ")
+        print("\ntổng các số chắn trong đay fibonacci là",total)
