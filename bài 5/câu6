@@ -1,0 +1,30 @@
+print("họ và tên :bùi văn hiếu")
+print("mssv:235752021610033")
+# main.py
+
+import sort_and_find
+
+def input_list():
+    n = int(input("Nhập số lượng phần tử của danh sách: "))
+    lst = []
+    for i in range(n):
+        element = int(input(f"Nhập phần tử thứ {i+1}: "))
+        lst.append(element)
+    return lst
+
+values = input_list()
+
+sorted_values = sort_and_find.sort_list(values)
+print(f"Danh sách đã sắp xếp: {sorted_values}")
+
+max_value = sort_and_find.find_max(values)
+print(f"Phần tử lớn nhất trong danh sách: {max_value}")
+
+min_value = sort_and_find.find_min(values)
+print(f"Phần tử nhỏ nhất trong danh sách: {min_value}")
+
+max_index = sort_and_find.find_max_index(values)
+print(f"Vị trí của phần tử lớn nhất: {max_index}")
+
+min_index = sort_and_find.find_min_index(values)
+print(f"Vị trí của phần tử nhỏ nhất: {min_index}")
