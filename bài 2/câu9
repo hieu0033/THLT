@@ -1,0 +1,7 @@
+print("sinh vien: bùi văn hiếu")
+print("mssv:235752021610033")
+a = "hi i am python programmer"
+b = a.split()
+print(b)
+c = " ".join(b)
+print(c)
