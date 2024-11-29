@@ -1,0 +1,10 @@
+print("235752021610033")
+print("bùi văn hiếu")
+def copy_file(src, dst):
+    with open(src, 'r') as src_file:
+        content = src_file.read()
+    with open(dst, 'w') as dst_file:
+        dst_file.write(content)
+source_file = 'source.txt'
+destination_file = 'destination.txt'
+copy_file(source_file, destination_file)
