@@ -1,0 +1,8 @@
+print("235752021610033")
+print("bùi văn hiếu")
+def write_list_to_file(fname, lst):
+    with open(fname, 'w') as file:
+        for item in lst:
+            file.write(f'{item}\n')
+my_list = ['Python', 'Java', 'C++', 'JavaScript']
+write_list_to_file('output.txt', my_list)
