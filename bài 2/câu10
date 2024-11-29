@@ -5,4 +5,3 @@ b = a.split()
 print(b)
 c = " ".jpin(b)
 print(c)
-
