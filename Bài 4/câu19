@@ -1,0 +1,15 @@
+print("họ và tên :bùi văn hiếu")
+print("mssv:235752021610033")
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+# Tạo một tuple chứa các số nguyên tố nhỏ hơn 1 triệu
+P = tuple(i for i in range(2, 1000000) if is_prime(i))
+
+# In ra tuple P
+print(P)
