@@ -1,0 +1,7 @@
+print("họ và tên: bùi văn hiếu")
+print("mssv:235752021610033")
+input_str = input("Nhập chuỗi: ")
+words = input_str.split()
+words.sort()
+for word in words:
+    print(word)
