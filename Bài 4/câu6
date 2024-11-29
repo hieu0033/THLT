@@ -1,0 +1,11 @@
+print("họ và tên: bùi văn hiếu")
+print("mssv:235752021610033")
+full_name = input('Nhập tên người: ')
+parts = full_name.split()
+if len(parts) >= 2:
+    last_name = parts[0]
+    first_name = parts[1]
+    print('Họ:', last_name)
+    print('Tên:', first_name)
+else:
+    print('Vui lòng nhập cả họ và tên.')
