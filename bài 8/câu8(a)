@@ -1,0 +1,28 @@
+print("họ và tên :bùi văn hiếu")
+print("mssv:235752021610033")
+import tkinter as tk
+
+def show_info():
+    info = f"""
+    Họ tên: Nguyễn Văn A
+    Ngày sinh: 01/01/2000
+    MSSV: 123456789
+    Ngành học: Công nghệ thông tin
+    """
+    info_label.config(text=info)
+
+# Tạo cửa sổ chính
+root = tk.Tk()
+root.title("Thông tin cá nhân")
+root.geometry("300x200")
+
+# Thêm nút bấm để hiển thị thông tin
+show_button = tk.Button(root, text="Hiển thị thông tin", command=show_info)
+show_button.pack(pady=10)
+
+# Nhãn để hiển thị thông tin
+info_label = tk.Label(root, text="", justify="left")
+info_label.pack(pady=10)
+
+# Bắt đầu vòng lặp giao diện
+root.mainloop()
