@@ -1,0 +1,9 @@
+print("họ và tên :bùi văn hiếu")
+print("mssv:235752021610033")
+def sum_of_divisors(n):
+    return sum(i for i in range(1, n) if n % i == 0)
+n = int(input("Nhập số n: "))
+for i in range(1, n):
+    if sum_of_divisors(i) > i:
+        print(i)
+
