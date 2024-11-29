@@ -1,0 +1,103 @@
+print("họ và tên :bùi văn hiếu")
+print("mssv:235752021610033")
+import tkinter
+import random
+
+# Danh sách các màu có thể
+colours = ['Red', 'Blue', 'Green', 'Pink', 'Black',  
+           'Yellow', 'Orange', 'White', 'Purple', 'Brown']
+score = 0
+
+# Thời gian chơi còn lại, ban đầu là 120 giây
+timeleft = 120
+
+# Hàm bắt đầu trò chơi
+def startGame(event):
+    if timeleft == 120:
+        # Bắt đầu đếm ngược
+        countdown()
+    
+    # Chạy hàm để chọn màu tiếp theo
+    nextColour()
+
+# Hàm chọn và hiển thị màu tiếp theo
+def nextColour():
+    global score
+    global timeleft
+
+    # Nếu trò chơi đang diễn ra
+    if timeleft > 0:
+        # Kích hoạt hộp nhập văn bản
+        e.focus_set()
+
+        # Nếu màu nhập vào khớp với màu của chữ
+        if e.get().lower() == colours[1].lower():
+            score += 2
+        elif e.get() != "":
+            score -= 1
+
+        # Xóa hộp nhập văn bản
+        e.delete(0, tkinter.END)
+        
+        random.shuffle(colours)
+        
+        # Thay đổi màu chữ và màu hiển thị ngẫu nhiên
+        label.config(fg = str(colours[1]), text = str(colours[0]))
+        
+        # Cập nhật điểm số
+        scoreLabel.config(text = "Score: " + str(score))
+
+# Hàm đếm ngược thời gian
+def countdown():
+    global timeleft
+
+    # Nếu trò chơi đang diễn ra
+    if timeleft > 0:
+        # Giảm thời gian còn lại
+        timeleft -= 1
+        
+        # Cập nhật nhãn thời gian còn lại
+        timeLabel.config(text = "Time left: " + str(timeleft))
+        
+        # Chạy hàm này sau 1 giây
+        timeLabel.after(1000, countdown)
+
+# Tạo cửa sổ GUI
+root = tkinter.Tk()
+
+# Đặt tiêu đề
+root.title("COLORGAME")
+
+# Đặt kích thước cửa sổ
+root.geometry("375x200")
+
+# Thêm nhãn hướng dẫn
+instructions = tkinter.Label(root, text = "Type in the colour of the words, and not the word text!", 
+                             font = ('Helvetica', 12))
+instructions.pack() 
+
+# Thêm nhãn điểm số
+scoreLabel = tkinter.Label(root, text = "Press enter to start", 
+                           font = ('Helvetica', 12))
+scoreLabel.pack()
+
+# Thêm nhãn thời gian còn lại
+timeLabel = tkinter.Label(root, text = "Time left: " + str(timeleft), font = ('Helvetica', 12))
+timeLabel.pack()
+
+# Thêm nhãn hiển thị màu
+label = tkinter.Label(root, font = ('Helvetica', 60))
+label.pack()
+
+# Thêm hộp nhập văn bản
+e = tkinter.Entry(root)
+
+# Chạy hàm 'startGame' khi nhấn phím enter
+root.bind('<Return>', startGame)
+e.pack()
+
+# Đặt focus vào hộp nhập văn bản
+e.focus_set()
+
+# Bắt đầu GUI
+root.mainloop()
