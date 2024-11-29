@@ -1,0 +1,6 @@
+print("họ và tên: bùi văn hiếu")
+print("mssv:235752021610033")
+ds = input('Nhập dãy các từ: ').split()
+max_length = max(len(word) for word in ds)
+longest_words = [word for word in ds if len(word) == max_length]
+print('Từ dài nhất:', longest_words)
