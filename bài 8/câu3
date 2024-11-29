@@ -1,0 +1,23 @@
+print("họ và tên :bùi văn hiếu")
+print("mssv:235752021610033")
+import turtle
+import random
+window = turtle.Screen()
+window.bgcolor("lightblue")
+colors = ["red", "green", "blue", "orange", "purple", "pink", "yellow"]
+painter = turtle.Turtle()
+painter.pensize(3)
+def draw_petal(t, radius, angle):
+    t.circle(radius, angle)
+    t.left(180 - angle)
+    t.circle(radius, angle)
+    t.left(180 - angle)
+def draw_flower(t, num_petals, radius, angle):
+    for _ in range(num_petals):
+        color = random.choice(colors)
+        t.pencolor(color)
+        draw_petal(t, radius, angle)
+        t.left(360 / num_petals)
+draw_flower(painter, 10, 100, 60)
+painter.hideturtle()
+window.exitonclick()
