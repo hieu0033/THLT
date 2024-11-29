@@ -1,0 +1,5 @@
+print("họ và tên: bùi văn hiếu")
+print("mssv:235752021610033")
+S = input('Nhập chuỗi: ')
+new_S = ''.join([ch for ch in S if not ch.isdigit()])
+print(new_S)
