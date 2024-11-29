@@ -1,0 +1,5 @@
+print("họ và tên: bùi văn hiếu")
+print("mssv:235752021610033")
+S = input('Nhập chuỗi: ')
+for ch in S:
+    print(ch.upper())
