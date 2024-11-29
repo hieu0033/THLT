@@ -1,0 +1,14 @@
+print('bùi văn hiếu')
+print('235752021610033')
+class ReverseString:
+    def __init__(self, s):
+        self.s = s
+
+    def reverse_words(self):
+        words = self.s.split()
+        reversed_words = words[::-1]
+        reversed_string = ' '.join(reversed_words)
+        return reversed_string
+input_string = 'hello .py'
+reverse_string = ReverseString(input_string)
+print(reverse_string.reverse_words())  
