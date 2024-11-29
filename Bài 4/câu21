@@ -1,0 +1,6 @@
+print("họ và tên :bùi văn hiếu")
+print("mssv:235752021610033")
+input_str = input("Nhập chuỗi các số nhị phân: ")
+numbers = input_str.split(',')
+result = [num for num in numbers if int(num, 2) % 5 == 0]
+print(','.join(result))
