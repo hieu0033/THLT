@@ -1,0 +1,23 @@
+print("họ và tên :bùi văn hiếu")
+print("mssv:235752021610033")
+# main.py
+
+import search_module
+
+def input_list():
+    n = int(input("Nhập số lượng phần tử của danh sách: "))
+    lst = []
+    for i in range(n):
+        element = int(input(f"Nhập phần tử thứ {i+1}: "))
+        lst.append(element)
+    return lst
+
+dlist = input_list()
+item = int(input("Nhập phần tử cần tìm: "))
+
+found, index = search_module.Sequential_Search(dlist, item)
+
+if found:
+    print(f"Phần tử {item} được tìm thấy tại chỉ mục {index}.")
+else:
+    print(f"Phần tử {item} không được tìm thấy trong danh sách.")
