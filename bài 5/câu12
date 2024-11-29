@@ -1,0 +1,22 @@
+print("họ và tên: bùi văn hiếu")
+print("mssv:235752021610033")
+import numpy as np
+
+# Dữ liệu đầu vào
+student_id = np.array([1023, 5202, 6230, 1671, 1682, 5241, 4532])
+student_height = np.array([40., 42., 45., 41., 38., 40., 42.])
+
+# Sắp xếp theo chiều cao
+sorted_indices = np.lexsort((student_id, student_height))
+
+# In ra các chỉ số sắp xếp
+print("Chỉ số:")
+print(sorted_indices)
+
+# In ra dữ liệu sắp xếp
+sorted_student_id = student_id[sorted_indices]
+sorted_student_height = student_height[sorted_indices]
+
+print("Dữ liệu sắp xếp:")
+for id, height in zip(sorted_student_id, sorted_student_height):
+    print(f"{id}\t{height}")
