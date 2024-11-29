@@ -1,0 +1,7 @@
+print("họ và tên :bùi văn hiếu")
+print("mssv:235752021610033")
+input_str = input("Nhập câu: ")
+upper_case = sum(c.isupper() for c in input_str)
+lower_case = sum(c.islower() for c in input_str)
+print(f"Chữ hoa: {upper_case}")
+print(f"Chữ thường: {lower_case}")
